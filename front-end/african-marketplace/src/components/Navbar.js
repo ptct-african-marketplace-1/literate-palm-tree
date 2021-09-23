@@ -1,28 +1,17 @@
 import React from 'react';
-import { Link, Switch, Route, BrowserRouter as Router } from 'react-router-dom'
-import Login from './Login'
-import About from './About'
+import { Link } from 'react-router-dom'
 
 
 const Navbar = () => {
 	return(
-		<Router>
-			<div>
+		
+			<div className="Navbar">
 				<Link to="/">African Marketplace</Link>
 				<Link to="/login">Log In</Link>
 				<Link to="/about">About</Link>
-				{/* the about page does not exist, it filler buttons */}
+				<Link to="/register">Create Acount</Link>
 			</div>
-			<Switch>
-				<Route path="/login">
-					<Login />
-				</Route>
-				<Route path="/about">
-					<About />
-				</Route>
-				<Route path="/"></Route>
-			</Switch>
-        </Router>
+        
 	)
 }
 

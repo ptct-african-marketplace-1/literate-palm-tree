@@ -1,30 +1,27 @@
 import React, { useState } from 'react'
 
-const Login = () => {
+const CreateAccount = () => {
 
 	const [form, setForm] = useState({
 		name: '',
-		password:'',
+		email: '',
+		password: '',
+		confirmPassword: ''
 	})
 
 	const handleChange = e => {
 		setForm({
 			...form,
 			[e.target.name] : e.target.value
-	})
+		})
 	}
 	const handleSubmit = e => {
 		e.preventDefault()
-		setForm({
-			...form,
-			name: '',
-			password: ''
-		})
 	}
 	return (
 		<div>
 			<form onSubmit={handleSubmit}>
-				<label htmlFor="name">Username
+				<label htmlFor="name">Name
 					<input
 						type="text"
 						name="name"
@@ -32,7 +29,15 @@ const Login = () => {
 						onChange={handleChange}
 					/>
 				</label>
-				<label htmlFor="password">Password
+				<label htmlFor="name">Email
+					<input
+						type="email"
+						name="email"
+						value={form.email}
+						onChange={handleChange}
+					/>
+				</label>
+				<label htmlFor="name">Password
 					<input
 						type="password"
 						name="password"
@@ -40,10 +45,18 @@ const Login = () => {
 						onChange={handleChange}
 					/>
 				</label>
-				<button type="submit">Log in</button>
+				<label htmlFor="name">Confirm Password
+					<input
+						type="password"
+						name="confirmPassword"
+						value={form.confirmPassword}
+						onChange={handleChange}
+					/>
+				</label>
+				<button type="submit">Register</button>
 			</form>
 		</div>
 	)
 }
 
-export default Login
+export default CreateAccount
