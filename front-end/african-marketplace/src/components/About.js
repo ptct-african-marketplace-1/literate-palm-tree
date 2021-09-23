@@ -9,3 +9,5 @@ const About = () => {
 		</h2>
 	)
 }
+
+export default About
