@@ -6,19 +6,18 @@ import CreateAccount from './CreateAccount'
 
 const Body = () => {
 	return (
-        
-			<Switch>
-				<Route path="/login">
-					<Login />
-            	</Route>
-            	<Route path="/about">
-            		<About />
-            	</Route>
-            	<Route path="/register">
-            		<CreateAccount />
-            	</Route>
-            	<Route path="/"></Route>
-       	 	</Switch>
+		<Switch>
+			<Route path="/login">
+				<Login />
+			</Route>
+			<Route path="/about">
+				<About />
+			</Route>
+			<Route path="/register">
+				<CreateAccount />
+			</Route>
+				<Route path="/"></Route>
+		</Switch>
 	)
 }
 export default Body

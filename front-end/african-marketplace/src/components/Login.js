@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { Button, Form,  Label, Input, FormGroup, Col } from 'reactstrap';
+
 
 const Login = () => {
 
@@ -22,26 +24,34 @@ const Login = () => {
 		})
 	}
 	return (
-		<div>
-			<form onSubmit={handleSubmit}>
-				<label htmlFor="name">Username
-					<input
-						type="text"
-						name="name"
-						value={form.name}
-						onChange={handleChange}
-					/>
-				</label>
-				<label htmlFor="password">Password
-					<input
-						type="password"
-						name="password"
-						value={form.password}
-						onChange={handleChange}
-					/>
-				</label>
-				<button type="submit">Log in</button>
-			</form>
+		<div className="Form">
+			<Form onSubmit={handleSubmit}>
+				<FormGroup>	
+					<Label htmlFor="name">Username:
+					<Col>
+						<Input
+							type="text"
+							name="name"
+							value={form.name}
+							onChange={handleChange}
+						/>
+						</Col>
+					</Label>
+				</FormGroup>
+				<FormGroup>
+					<Label htmlFor="password">Password:
+					<Col>
+						<Input
+							type="password"
+							name="password"
+							value={form.password}
+							onChange={handleChange}
+						/>
+						</Col>
+					</Label>
+				</FormGroup>
+				<Button type="submit">Log in</Button>
+			</Form>
 		</div>
 	)
 }

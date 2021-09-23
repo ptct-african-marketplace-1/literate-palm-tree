@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { Button, Form, Label, Input, Col, FormGroup } from 'reactstrap';
+
 
 const CreateAccount = () => {
 
@@ -20,41 +22,59 @@ const CreateAccount = () => {
 	}
 	return (
 		<div>
-			<form onSubmit={handleSubmit}>
-				<label htmlFor="name">Name
-					<input
+			<Form onSubmit={handleSubmit}>
+				<FormGroup>
+				<Label htmlFor="name">Name:
+					<Col lg={12}>
+					<Input
 						type="text"
 						name="name"
 						value={form.name}
 						onChange={handleChange}
 					/>
-				</label>
-				<label htmlFor="name">Email
-					<input
+					</Col>
+				</Label>
+				</FormGroup>
+
+				<FormGroup>
+				<Label htmlFor="name">Email:
+					<Col lg={12}>
+
+					<Input
 						type="email"
 						name="email"
 						value={form.email}
 						onChange={handleChange}
 					/>
-				</label>
-				<label htmlFor="name">Password
-					<input
+					</Col>
+				</Label>
+				</FormGroup>
+				<FormGroup>
+				<Label htmlFor="name">Password:
+					<Col lg={12}>
+					<Input
 						type="password"
 						name="password"
 						value={form.password}
 						onChange={handleChange}
 					/>
-				</label>
-				<label htmlFor="name">Confirm Password
-					<input
+					</Col>
+				</Label>
+				</FormGroup>
+				<FormGroup>
+				<Label htmlFor="name">Confirm Password
+					<Col lg={12}>
+					<Input
 						type="password"
 						name="confirmPassword"
 						value={form.confirmPassword}
 						onChange={handleChange}
 					/>
-				</label>
-				<button type="submit">Register</button>
-			</form>
+					</Col>
+				</Label>
+				</FormGroup>
+				<Button type="submit">Register</Button>
+			</Form>
 		</div>
 	)
 }

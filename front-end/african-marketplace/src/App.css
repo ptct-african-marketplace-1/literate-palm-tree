@@ -8,12 +8,12 @@
   background-color: rgb(224, 221, 221);
   display: flex;
   justify-content: space-around;
+  margin-bottom: 100px;
 }
 
-a {
+a{
   text-decoration: none;
 }
-
 
 .App-link {
   color: #61dafb;
