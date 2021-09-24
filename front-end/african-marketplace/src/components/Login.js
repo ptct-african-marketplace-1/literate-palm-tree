@@ -27,24 +27,27 @@ const Login = () => {
 		<div className="Form">
 			<Form onSubmit={handleSubmit}>
 				<FormGroup>	
-					<Label htmlFor="name">Username:
+					<Label htmlFor="name">
 					<Col>
 						<Input
 							type="text"
 							name="name"
 							value={form.name}
+							placeholder="Username"
 							onChange={handleChange}
+								
 						/>
 						</Col>
 					</Label>
 				</FormGroup>
 				<FormGroup>
-					<Label htmlFor="password">Password:
+					<Label htmlFor="password">
 					<Col>
 						<Input
 							type="password"
 							name="password"
 							value={form.password}
+							placeholder="Password"
 							onChange={handleChange}
 						/>
 						</Col>

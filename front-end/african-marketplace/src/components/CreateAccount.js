@@ -24,7 +24,7 @@ const CreateAccount = () => {
 		<div>
 			<Form onSubmit={handleSubmit}>
 				<FormGroup>
-				<Label htmlFor="name">Name:
+				<Label htmlFor="name">
 					<Col lg={12}>
 					<Input
 						type="text"
@@ -37,7 +37,7 @@ const CreateAccount = () => {
 				</FormGroup>
 
 				<FormGroup>
-				<Label htmlFor="name">Email:
+				<Label htmlFor="name">
 					<Col lg={12}>
 
 					<Input
